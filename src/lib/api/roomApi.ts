@@ -83,7 +83,7 @@ export class RoomApiService {
   static async showRoomAvailable(propertyId: string, roomId: string): Promise<RoomDetails> {
     // Send RoomUpdateDto with isAvailable: true
     const token = localStorage.getItem('auth_token');
-    const response = await fetch(`http://localhost:8080/api/property/${propertyId}/rooms/${roomId}/show-available`, {
+    const response = await fetch(`https://demo-deployment-latest-5tdw.onrender.com/api/property/${propertyId}/rooms/${roomId}/show-available`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ export class RoomApiService {
   // Toggle room availability
   static async toggleRoomAvailability(propertyId: string, roomId: string, updateData: { available: boolean }): Promise<RoomDetails> {
     const token = localStorage.getItem('auth_token');
-    const response = await fetch(`http://localhost:8080/api/property/${propertyId}/rooms/${roomId}/show-available`, {
+    const response = await fetch(`https://demo-deployment-latest-5tdw.onrender.com/api/property/${propertyId}/rooms/${roomId}/show-available`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

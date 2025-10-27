@@ -18,11 +18,11 @@ export class AuthApiService {
   // Login user
   static async login(credentials: LoginRequest): Promise<LoginResponse> {
     console.log('Attempting login with credentials:', credentials);
-    console.log('Backend URL: http://localhost:8080/auth/login');
+    console.log('Backend URL: https://demo-deployment-latest-5tdw.onrender.com/auth/login');
     
     try {
       // Use direct fetch for auth endpoint since it's not under /api
-      const response = await fetch('http://localhost:8080/auth/login', {
+      const response = await fetch('https://demo-deployment-latest-5tdw.onrender.com/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
