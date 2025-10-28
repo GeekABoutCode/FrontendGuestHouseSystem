@@ -7,8 +7,8 @@ interface AdminLoginProps {
 }
 
 export default function AdminLogin({ onLoginSuccess }: AdminLoginProps) {
-  const [email, setEmail] = useState('super@nigga.com');
-  const [password, setPassword] = useState('guniya');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
